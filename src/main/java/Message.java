@@ -14,6 +14,22 @@ public class Message {
         this.date = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
     }
 
+    public User getFrom() {
+        return from;
+    }
+
+    public User getTo() {
+        return to;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
     @Override
     public String toString() {
         return "Message{" +
