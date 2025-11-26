@@ -9,6 +9,5 @@
         <module name="Deam" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="21" />
   </component>
 </project>
