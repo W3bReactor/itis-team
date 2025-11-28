@@ -2,6 +2,8 @@ public class User {
     public String id;
     public String name;
     public String status;
+    public int userCount = 5;
+
 
     public User (String id, String name,String status) {
         this.id = id;
@@ -9,6 +11,10 @@ public class User {
         this.status = status;
     }
 
+    public User (String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
 
     @Override

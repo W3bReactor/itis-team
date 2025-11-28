@@ -1,11 +1,20 @@
 public class Main {
     public static void main(String[] args) {
+
         System.out.println("Разработка проекта");
         Channel channel = new Channel();
-        User user = new User("12345","Ilkhan","CHANNEL_ADMIN");
-        User subscribers = new User("1234567","Bob","CHANNEL_USER");
-        Message message = new Message(user,subscribers,"Hello world!");
 
-        channel.printMessage(user,message);
+
+        User[] users = new User[5];
+        users[0] = new User("1234567","Bob","SUBSCRIBER");
+        users[1] = new User("1000","Ilkhan","CHANNEL_ADMIN");
+        users[2] = new User("1001", "Malik");
+        users[3] = new User("1002", "Rinat");
+        users[4] = new User("1003", "Insaf");
+
+        Message Message1 = new Message(users[1],users[0],"Hello subs!");
+
+
+        channel.printMessage(users[1],Message1);
     }
 }
