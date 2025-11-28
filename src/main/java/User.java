@@ -2,7 +2,6 @@ public class User {
     public String id;
     public String name;
     public String status;
-    public int userCount = 5;
 
 
     public User (String id, String name,String status) {
