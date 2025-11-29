@@ -4,12 +4,28 @@ import java.util.Date;
 public class Message {
     private User from;
     private User to;
+    private Group toGroup;
+    private Channel toChannel;
     private String text;
     private String date;
 
     public Message(User from, User to, String text) {
         this.from = from;
         this.to = to;
+        this.text = text;
+        this.date = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
+    }
+
+    public Message(User from, Group toGroup, String text) {
+        this.from = from;
+        this.toGroup = toGroup;
+        this.text = text;
+        this.date = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
+    }
+
+    public Message(User from, Channel toChannel, String text) {
+        this.from = from;
+        this.toChannel = toChannel;
         this.text = text;
         this.date = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
     }
@@ -34,9 +50,19 @@ public class Message {
     public String toString() {
         return "Message{" +
                 "from=" + from +
-                ", to=" + to +
+                ", to=" + toChannel.channelName +
                 ", text='" + text + '\'' +
                 ", date=" + date +
                 '}';
+
+    }
+    public String showGroupMessages() {
+        return "Message{" +
+                "from=" + from +
+                ", to=" + toGroup.groupName +
+                ", text='" + text + '\'' +
+                ", date=" + date +
+                '}';
+
     }
 }
